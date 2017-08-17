@@ -1,0 +1,47 @@
+{
+  "//1": "describes your app and its dependencies",
+  "//2": "https://docs.npmjs.com/files/package.json",
+  "//3": "updating this file will download and update your packages",
+  "name": "react-weather",
+  "version": "1.0.0",
+  "description": "Simple react weather app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "axios": "^0.16.2",
+    "express": "^4.15.2",
+    "prop-types": "^15.5.10",
+    "react": "^0.14.9",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.0"
+  },
+  "engines": {
+    "node": "6.10.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/welcome-project"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.23.1",
+    "foundation-sites": "^6.2.0",
+    "jquery": "^2.2.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "script-loader": "^0.6.1",
+    "style-loader": "^0.13.2",
+    "webpack": "^3.4.1"
+  }
+}
