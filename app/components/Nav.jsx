@@ -10,22 +10,22 @@ var Nav = () => {
             React Timer
           </li>
           <li>
-            <IndexLink to="/">Timer</IndexLink>
-          </li>
-          <li>
-            <IndexLink to="/">Countdown</IndexLink>
-          </li>
-        </ul>
-      </div>
-      <div className="top-bar-right">
-        <ul className="menu">
-          <li className="menu-text">
-            Created by <a href="https://github.com/dapierce/">David Pierce</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  );
+            <IndexLink to="/" activeClassName="active-link">Timer</IndexLink>
+        </li>
+        <li>
+          <IndexLink to="/countdown" activeClassName="active-link">Countdown</IndexLink>
+      </li>
+    </ul>
+  </div>
+  <div className="top-bar-right">
+    <ul className="menu">
+      <li className="menu-text">
+        Created by <a href="https://github.com/dapierce/">David Pierce</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+);
 };
 
 module.exports = Nav;
