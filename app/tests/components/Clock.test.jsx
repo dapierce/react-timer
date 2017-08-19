@@ -38,7 +38,7 @@ describe('Clock', () => {
       expect(actual).toBe(expected);
     });
 
-    it('formats time in hours when bigger number is passed in', () => {
+    it('formats time in hours when big number is passed', () => {
       var clock = ReactTestUtils.renderIntoDocument(<Clock/>);
       var seconds = 18122;
       var expected = '05:02:02';
