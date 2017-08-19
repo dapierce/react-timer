@@ -1,0 +1,11 @@
+.controls {
+  display: flex;
+
+  .button {
+    width: 50%;
+  }
+
+  .button:first-child {
+    margin-right: 1rem;
+  }
+}
