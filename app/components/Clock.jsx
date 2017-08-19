@@ -1,6 +1,6 @@
 var React = require('react');
 var createReactClass = require('create-react-class');
-import PropTypes from 'prop-types';
+var PropTypes = require('prop-types');
 
 var Clock = createReactClass({
   getDefaultProps: function() {
