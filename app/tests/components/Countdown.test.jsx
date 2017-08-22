@@ -12,7 +12,7 @@ describe('Countdown', () => {
   });
 
   describe('handleSetCountdown', () => {
-    it('set state to "start" and count down time', (done) => {
+    it('should set state to "start" and count down time', (done) => {
       var countdown = ReactTestUtils.renderIntoDocument(<Countdown/>);
       countdown.handleSetCountdown(10);
 
@@ -25,7 +25,7 @@ describe('Countdown', () => {
       }, 1001);
     });
 
-    it('count never goes negative', (done) => {
+    it('should never count down to negative', (done) => {
       var countdown = ReactTestUtils.renderIntoDocument(<Countdown/>);
       countdown.handleSetCountdown(1);
 
@@ -35,7 +35,7 @@ describe('Countdown', () => {
       }, 3001);
     });
 
-    it('countdown pauses on "pause" status', (done) => {
+    it('should pause countdown on "pause" status', (done) => {
       var countdown = ReactTestUtils.renderIntoDocument(<Countdown/>);
       countdown.handleSetCountdown(3);
       countdown.handleStatusChange('pause');
@@ -47,7 +47,7 @@ describe('Countdown', () => {
       }, 1001);
     });
 
-    it('countdown stops on "stop" status', (done) => {
+    it('should stop countdown on "stop" status', (done) => {
       var countdown = ReactTestUtils.renderIntoDocument(<Countdown/>);
       countdown.handleSetCountdown(3);
       countdown.handleStatusChange('stop');
