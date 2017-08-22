@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
   entry: [
@@ -13,7 +14,13 @@ module.exports = {
     new webpack.ProvidePlugin({
       '$': 'jquery',
       'jQuery': 'jquery'
-    })
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin()
   ],
   output: {
     path: __dirname,
@@ -37,7 +44,7 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   module: {
-    loaders: [
+    rules: [
       {
         loader: 'babel-loader',
         query: {
@@ -45,6 +52,26 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: [
+                path.resolve(__dirname, './app/styles'),
+                path.resolve(__dirname, './node_modules/foundation-sites/scss')
+              ]
+            }
+          }
+        ]
       }
     ]
   },
