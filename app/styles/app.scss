@@ -2,6 +2,7 @@
 @import "components/nav";
 @import "components/clock";
 @import "components/controls";
+@import "components/page-title";
 
 /* This typographic stack should work well across most platforms */
 $system-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -10,9 +11,4 @@ $system-fonts: -apple-system, BlinkMacSystemFont, "Segoe UI",
 
 body, h1, h2, h3, h4, h5, h6, p {
   font-family: $system-fonts;
-}
-
-.page-header {
-  text-align: center;
-  margin-top: 2rem;
 }
